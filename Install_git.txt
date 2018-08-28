@@ -1,0 +1,24 @@
+# Install
+sudo apt-get install git
+sudo apt-get install xclip
+
+# Configure global user for the local repo
+git config --global user.name "Daniel Persson" 
+
+# Configure global email for local repo
+git config --global user.email "toxaris@hotmail.com"
+
+# Generate SSH key
+ssh-keygen -t rsa -b 4096 -C "toxaris@hotmail.com"
+(Specify name when prompted)
+
+# Add key to SSH
+ssh-add /home/pi/git_ssh_key
+
+# Copy public key to clipboard
+xclip -sel clip < /home/pi/git_ssh_key.pub
+
+Now, Add the public key manualy in settings on github
+
+# Clone the repo from github to local rpo /home/pi/rpi
+git clone https://github.com/toxarisswe/rpi
