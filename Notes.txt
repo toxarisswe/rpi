@@ -11,3 +11,6 @@ git push origin master
 
 When uploading a new file, first run
 git add .
+
+To update local repo
+git pull origin master
