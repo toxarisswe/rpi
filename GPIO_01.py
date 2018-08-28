@@ -6,7 +6,7 @@ GPIO.setwarnings(False)
 GPIO.setmode(GPIO.BOARD)
 GPIO.setup(11, GPIO.OUT)
 
-# Flashing LED
+# Flashing LED with random time
 while True:
     GPIO.output(11, True)
     randtime = random.uniform(0.1,0.9)
